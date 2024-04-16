@@ -1,0 +1,22 @@
+<%- include('header'); %>
+<%- include('nav'); %>
+<main>
+    <h3>Sign Up</h3>
+    <form action="/register" method="POST">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <span class="error" style="display: none;" id="usernameError">Username is required</span>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required pattern=".{8,}" title="Password must be at least 8 characters long">
+        <span class="error" style="display: none;" id="passwordError">Password must be at least 8 characters long</span>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" id="phone">
+        
+        <button class="btn btn-success">Submit</button>
+    </form>
+</main>
